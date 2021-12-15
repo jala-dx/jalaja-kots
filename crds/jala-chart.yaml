@@ -1,0 +1,8 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: jala-chart
+spec:
+  chart: https://%{KUBERNETES_API}%/static/charts/jala-chart-0.1.0.tgz
+
+
