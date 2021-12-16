@@ -1,0 +1,8 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: kots-helm
+spec:
+  chart: https://github.com/jala-dx/jalaja-kots/raw/main/charts/kots-helm-0.1.0.tgz
+  set:
+    kotsadm.kotsadmPassword: "password"
