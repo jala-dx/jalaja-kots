@@ -1,7 +1,11 @@
 #!/bin/bash -x
 
-# make sure rke2 is installed.
+# make sure rke2 is installed. Ref: https://docs.rke2.io/install/quickstart/
+# A kubeconfig file will be written to /etc/rancher/rke2/rke2.yaml when complete
 # curl -sfL https://get.rke2.io | sh -
+# systemctl enable rke2-server.service
+# systemctl start rke2-server.service
+
 
 # install local-path-provisioner for pvc. rke2 does not come with a default pvc provisioner
 kubectl apply -f https://raw.githubusercontent.com/rancher/local-path-provisioner/master/deploy/local-path-storage.yaml
